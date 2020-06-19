@@ -1,5 +1,8 @@
+import { cardCopy } from '../copy/cardCopy.js';
+
 const initialState = {
   cardStep: 1,
+  copy: cardCopy[0],
 };
 
 export const rootReducer = function (state = initialState, action) {
@@ -8,6 +11,11 @@ export const rootReducer = function (state = initialState, action) {
       return {
         ...state,
         cardStep: action.payload,
+      };
+    case 'SET_COPY':
+      return {
+        ...state,
+        copy: action.payload,
       };
     default:
       return state;

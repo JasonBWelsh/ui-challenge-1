@@ -10,7 +10,7 @@ export const StyledCard = styled.div`
   justify-content: space-between;
   align-items: center;
   color: #8391a1;
-  box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 6px 10px 14px 0px rgba(0, 0, 0, 0.2);
 
   @media (min-width: 768px) {
     width: 400px;

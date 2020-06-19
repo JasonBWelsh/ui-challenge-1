@@ -10,8 +10,6 @@ export const rootReducer = function (state = initialState, action) {
         cardStep: action.payload,
       };
     default:
-      return {
-        state,
-      };
+      return state;
   }
 };

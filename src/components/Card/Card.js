@@ -5,13 +5,15 @@ import { useSelector, useDispatch } from 'react-redux';
 function Card() {
   const dispatch = useDispatch();
   const cardStep = useSelector((state) => state.cardStep);
-  console.log('DRD cardStep:::', cardStep);
 
   function handleNextStep() {
     let step = cardStep;
-    step === 3 ? (step = 1) : (step += 1);
-    console.log(step);
-    dispatch({ type: 'DRD' });
+    if (step < 3) {
+      step += 1;
+    } else {
+      step = 1;
+    }
+    dispatch({ type: 'NEXT_STEP', payload: step });
   }
 
   return (
